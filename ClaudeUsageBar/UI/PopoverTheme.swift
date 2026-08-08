@@ -106,3 +106,33 @@ struct QuietTextButtonStyle: ButtonStyle {
             .foregroundStyle(configuration.isPressed ? PopoverTheme.coral : PopoverTheme.muted)
     }
 }
+
+
+extension PopoverTheme {
+    /// Seconds within which an update is described as "just now".
+    ///
+    /// `RelativeDateTimeFormatter` renders a timestamp a fraction of a second in the
+    /// past as future tense ("in 0 sec"), because the interval rounds to zero and the
+    /// formatter's sign convention then reads as upcoming. A just-completed refresh
+    /// must never claim to happen in the future.
+    static let justNowThreshold: TimeInterval = 5
+
+    static func relativeUpdatedText(
+        for date: Date,
+        now: Date,
+        isStale: Bool
+    ) -> String {
+        let elapsed = now.timeIntervalSince(date)
+        let relative: String
+        if elapsed < justNowThreshold {
+            // Covers both the sub-threshold case and any clock skew that would
+            // otherwise put the last refresh in the future.
+            relative = "just now"
+        } else {
+            let formatter = RelativeDateTimeFormatter()
+            formatter.unitsStyle = .abbreviated
+            relative = formatter.localizedString(for: date, relativeTo: now)
+        }
+        return isStale ? "\(relative) · stale" : relative
+    }
+}

@@ -849,4 +849,53 @@ final class RefreshAndCacheTests: XCTestCase {
         XCTAssertEqual(image.size, UsageRingRenderer.canvasSize)
         XCTAssertFalse(image.isTemplate, "band colour must survive system tinting")
     }
+
+    // MARK: - Relative timestamp
+
+    @MainActor
+    func testJustRefreshedNeverReadsAsFutureTense() {
+        let now = Date(timeIntervalSince1970: 1_000_000)
+        // A refresh that completed a fraction of a second ago previously rendered as
+        // "in 0 sec" because the interval rounded to zero.
+        let text = PopoverTheme.relativeUpdatedText(
+            for: now.addingTimeInterval(-0.2),
+            now: now,
+            isStale: false
+        )
+        XCTAssertEqual(text, "just now")
+        XCTAssertFalse(text.hasPrefix("in "))
+    }
+
+    @MainActor
+    func testClockSkewIntoTheFutureStillReadsAsJustNow() {
+        let now = Date(timeIntervalSince1970: 1_000_000)
+        let text = PopoverTheme.relativeUpdatedText(
+            for: now.addingTimeInterval(30),
+            now: now,
+            isStale: false
+        )
+        XCTAssertEqual(text, "just now")
+    }
+
+    @MainActor
+    func testOlderTimestampsStillUseRelativeFormatting() {
+        let now = Date(timeIntervalSince1970: 1_000_000)
+        let text = PopoverTheme.relativeUpdatedText(
+            for: now.addingTimeInterval(-600),
+            now: now,
+            isStale: false
+        )
+        XCTAssertNotEqual(text, "just now")
+    }
+
+    @MainActor
+    func testStaleSuffixIsPreserved() {
+        let now = Date(timeIntervalSince1970: 1_000_000)
+        let text = PopoverTheme.relativeUpdatedText(
+            for: now.addingTimeInterval(-1),
+            now: now,
+            isStale: true
+        )
+        XCTAssertEqual(text, "just now · stale")
+    }
 }

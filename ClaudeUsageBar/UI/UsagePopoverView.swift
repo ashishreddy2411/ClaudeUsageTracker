@@ -207,10 +207,11 @@ struct UsagePopoverView: View {
     }
 
     private func relativeUpdated(_ date: Date) -> String {
-        let formatter = RelativeDateTimeFormatter()
-        formatter.unitsStyle = .abbreviated
-        let relative = formatter.localizedString(for: date, relativeTo: Date())
-        return monitor.isStale ? "\(relative) · stale" : relative
+        return PopoverTheme.relativeUpdatedText(
+            for: date,
+            now: Date(),
+            isStale: monitor.isStale
+        )
     }
 
     private func bannerView(_ message: String) -> some View {

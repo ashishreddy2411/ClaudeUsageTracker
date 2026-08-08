@@ -10,57 +10,15 @@ endorsed by, or sponsored by Anthropic.
 
 ## Screenshots
 
-Not yet captured. The images below are referenced but intentionally absent until
-a maintainer adds sanitized captures.
+<img src="docs/images/menu-bar.png" alt="Usage ring and percentage in the macOS menu bar" width="337">
 
-| Menu bar | Popover | Settings |
-| --- | --- | --- |
-| `docs/images/menu-bar.png` | `docs/images/popover.png` | `docs/images/settings.png` |
+| Popover | Settings |
+| --- | --- |
+| <img src="docs/images/popover.png" alt="Popover showing session and weekly usage bars with reset countdowns" width="337"> | <img src="docs/images/settings.png" alt="Settings showing alerts, refresh interval, and menu bar window selection" width="340"> |
 
-To add them:
-
-```bash
-# Menu bar region and the open popover
-screencapture -i docs/images/menu-bar.png
-screencapture -i docs/images/popover.png
-screencapture -i docs/images/settings.png
-```
-
-Sanitize before committing. A menu bar capture includes your other status items,
-and the popover shows real utilization percentages and reset times. Crop to the
-app and blur or regenerate anything you would not publish. These images are
-public and permanent once pushed.
-
-## Quick start
-
-```bash
-git clone https://github.com/ashishreddy2411/ClaudeUsageTracker.git
-cd ClaudeUsageTracker
-chmod +x Scripts/*.sh
-
-# Once per machine. Without it, macOS re-prompts for Keychain access
-# after every rebuild. See "Why the local signing identity matters".
-./Scripts/create-local-signing-identity.sh
-
-./Scripts/build.sh
-open dist/ClaudeUsageBar.app
-```
-
-The app has no Dock icon. Look for the usage ring in your menu bar, click it,
-then click **Connect Claude Code** and choose **Always Allow** when macOS asks
-for Keychain access.
-
-To verify a checkout before building:
-
-```bash
-xcodebuild test \
-  -project ClaudeUsageBar.xcodeproj \
-  -scheme ClaudeUsageBar \
-  -destination 'platform=macOS' \
-  CODE_SIGN_IDENTITY="-"
-
-swift Scripts/smoke-logic.swift
-```
+The menu bar reports whichever window you select under **Settings -> Show**. In
+the captures above it is set to `Session`, so the menu bar reads 22% while the
+weekly bar sits at 54%.
 
 ## Requirements
 
