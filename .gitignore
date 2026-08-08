@@ -1,0 +1,66 @@
+# macOS metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Xcode and Swift build products
+build/
+dist/
+DerivedData/
+.build/
+*.app/
+*.dmg
+*.pkg
+*.ipa
+*.xcarchive/
+*.xcresult/
+*.dSYM/
+*.dSYM.zip
+*.hmap
+*.moved-aside
+*.xcuserstate
+xcuserdata/
+*.xccheckout
+*.xcscmblueprint
+.swiftpm/
+
+# Generated archives
+*.zip
+*.tar
+*.tar.gz
+
+# Signing, notarization, and local credentials
+*.p8
+*.p12
+*.pem
+*.key
+*.cer
+*.certSigningRequest
+*.keychain
+*.keychain-db
+*.mobileprovision
+*.provisionprofile
+.env
+.env.*
+!.env.example
+.envrc
+.direnv/
+credentials.json
+*.credentials.json
+
+# Local IDE and agent state
+.cursor/
+.idea/
+.vscode/
+.claude/
+.codex/
+*.canvas.tsx
+
+# Local design research
+UI-UX-Inspirations/
+
+# Editor and temporary files
+*.swp
+*.swo
+*~

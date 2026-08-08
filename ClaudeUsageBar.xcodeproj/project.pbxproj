@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* ClaudeUsageBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000001 /* ClaudeUsageBarApp.swift */; };
+		A10000000000000000000002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000002 /* AppDelegate.swift */; };
+		A10000000000000000000003 /* KeychainTokenReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000003 /* KeychainTokenReader.swift */; };
+		A10000000000000000000004 /* UsageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000004 /* UsageClient.swift */; };
+		A10000000000000000000005 /* UsageModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000005 /* UsageModels.swift */; };
+		A10000000000000000000006 /* UsageMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000006 /* UsageMonitor.swift */; };
+		A10000000000000000000007 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000007 /* NotificationService.swift */; };
+		A10000000000000000000008 /* HotKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000008 /* HotKeyManager.swift */; };
+		A10000000000000000000009 /* PreferencesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000009 /* PreferencesStore.swift */; };
+		A1000000000000000000000A /* SparkIconRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000A /* SparkIconRenderer.swift */; };
+		A1000000000000000000000B /* UsagePopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000B /* UsagePopoverView.swift */; };
+		A1000000000000000000000C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000C /* SettingsView.swift */; };
+		A1000000000000000000000D /* SetupHelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000D /* SetupHelpView.swift */; };
+		A1000000000000000000001A /* PopoverTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000001D /* PopoverTheme.swift */; };
+		A1000000000000000000000E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000E /* Assets.xcassets */; };
+		A1000000000000000000000F /* UsageModelsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000000F /* UsageModelsTests.swift */; };
+		A10000000000000000000010 /* ThresholdLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000010 /* ThresholdLogicTests.swift */; };
+		A10000000000000000000011 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B10000000000000000000011 /* Carbon.framework */; };
+		A10000000000000000000018 /* TokenProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000001B /* TokenProvider.swift */; };
+		A10000000000000000000019 /* ConnectionLogicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000001C /* ConnectionLogicTests.swift */; };
+		A1000000000000000000001B /* AllowlistedRedirectDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000001E /* AllowlistedRedirectDelegate.swift */; };
+		A1000000000000000000001C /* MenuBarPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1000000000000000000001F /* MenuBarPresentation.swift */; };
+		A1000000000000000000001D /* UsageClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000000000000000000020 /* UsageClientTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C10000000000000000000001 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D10000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E10000000000000000000001;
+			remoteInfo = ClaudeUsageBar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B10000000000000000000001 /* ClaudeUsageBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClaudeUsageBarApp.swift; sourceTree = "<group>"; };
+		B10000000000000000000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B10000000000000000000003 /* KeychainTokenReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainTokenReader.swift; sourceTree = "<group>"; };
+		B10000000000000000000004 /* UsageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageClient.swift; sourceTree = "<group>"; };
+		B10000000000000000000005 /* UsageModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageModels.swift; sourceTree = "<group>"; };
+		B10000000000000000000006 /* UsageMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageMonitor.swift; sourceTree = "<group>"; };
+		B10000000000000000000007 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		B10000000000000000000008 /* HotKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyManager.swift; sourceTree = "<group>"; };
+		B10000000000000000000009 /* PreferencesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesStore.swift; sourceTree = "<group>"; };
+		B1000000000000000000000A /* SparkIconRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SparkIconRenderer.swift; sourceTree = "<group>"; };
+		B1000000000000000000000B /* UsagePopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsagePopoverView.swift; sourceTree = "<group>"; };
+		B1000000000000000000000C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		B1000000000000000000000D /* SetupHelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupHelpView.swift; sourceTree = "<group>"; };
+		B1000000000000000000001D /* PopoverTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverTheme.swift; sourceTree = "<group>"; };
+		B1000000000000000000000E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B1000000000000000000000F /* UsageModelsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageModelsTests.swift; sourceTree = "<group>"; };
+		B10000000000000000000010 /* ThresholdLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThresholdLogicTests.swift; sourceTree = "<group>"; };
+		B10000000000000000000011 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		B10000000000000000000012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B10000000000000000000013 /* ClaudeUsageBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClaudeUsageBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B10000000000000000000014 /* ClaudeUsageBarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClaudeUsageBarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1000000000000000000001B /* TokenProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenProvider.swift; sourceTree = "<group>"; };
+		B1000000000000000000001C /* ConnectionLogicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionLogicTests.swift; sourceTree = "<group>"; };
+		B1000000000000000000001E /* AllowlistedRedirectDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllowlistedRedirectDelegate.swift; sourceTree = "<group>"; };
+		B1000000000000000000001F /* MenuBarPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarPresentation.swift; sourceTree = "<group>"; };
+		B10000000000000000000020 /* UsageClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageClientTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F10000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000011 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F10000000000000000000002 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		G10000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				G10000000000000000000002 /* ClaudeUsageBar */,
+				G10000000000000000000003 /* Tests */,
+				G10000000000000000000004 /* Frameworks */,
+				G10000000000000000000005 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		G10000000000000000000002 /* ClaudeUsageBar */ = {
+			isa = PBXGroup;
+			children = (
+				G10000000000000000000006 /* App */,
+				G10000000000000000000007 /* Auth */,
+				G10000000000000000000008 /* Network */,
+				G10000000000000000000009 /* Services */,
+				G1000000000000000000000A /* UI */,
+				G1000000000000000000000B /* Resources */,
+			);
+			path = ClaudeUsageBar;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000003 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B1000000000000000000000F /* UsageModelsTests.swift */,
+				B10000000000000000000010 /* ThresholdLogicTests.swift */,
+				B1000000000000000000001C /* ConnectionLogicTests.swift */,
+				B10000000000000000000020 /* UsageClientTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000004 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000011 /* Carbon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000005 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000013 /* ClaudeUsageBar.app */,
+				B10000000000000000000014 /* ClaudeUsageBarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000006 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000001 /* ClaudeUsageBarApp.swift */,
+				B10000000000000000000002 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000007 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000003 /* KeychainTokenReader.swift */,
+				B1000000000000000000001B /* TokenProvider.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000008 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000004 /* UsageClient.swift */,
+				B10000000000000000000005 /* UsageModels.swift */,
+				B1000000000000000000001E /* AllowlistedRedirectDelegate.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		G10000000000000000000009 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000006 /* UsageMonitor.swift */,
+				B10000000000000000000007 /* NotificationService.swift */,
+				B10000000000000000000008 /* HotKeyManager.swift */,
+				B1000000000000000000001F /* MenuBarPresentation.swift */,
+				B10000000000000000000009 /* PreferencesStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		G1000000000000000000000A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B1000000000000000000000A /* SparkIconRenderer.swift */,
+				B1000000000000000000000B /* UsagePopoverView.swift */,
+				B1000000000000000000000C /* SettingsView.swift */,
+				B1000000000000000000000D /* SetupHelpView.swift */,
+				B1000000000000000000001D /* PopoverTheme.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		G1000000000000000000000B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B10000000000000000000012 /* Info.plist */,
+				B1000000000000000000000E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E10000000000000000000001 /* ClaudeUsageBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = H10000000000000000000001 /* Build configuration list for PBXNativeTarget "ClaudeUsageBar" */;
+			buildPhases = (
+				I10000000000000000000001 /* Sources */,
+				F10000000000000000000001 /* Frameworks */,
+				J10000000000000000000001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClaudeUsageBar;
+			productName = ClaudeUsageBar;
+			productReference = B10000000000000000000013 /* ClaudeUsageBar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E10000000000000000000002 /* ClaudeUsageBarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = H10000000000000000000002 /* Build configuration list for PBXNativeTarget "ClaudeUsageBarTests" */;
+			buildPhases = (
+				I10000000000000000000002 /* Sources */,
+				F10000000000000000000002 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				K10000000000000000000001 /* PBXTargetDependency */,
+			);
+			name = ClaudeUsageBarTests;
+			productName = ClaudeUsageBarTests;
+			productReference = B10000000000000000000014 /* ClaudeUsageBarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D10000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					E10000000000000000000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					E10000000000000000000002 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = E10000000000000000000001;
+					};
+				};
+			};
+			buildConfigurationList = H10000000000000000000003 /* Build configuration list for PBXProject "ClaudeUsageBar" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = G10000000000000000000001;
+			productRefGroup = G10000000000000000000005 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E10000000000000000000001 /* ClaudeUsageBar */,
+				E10000000000000000000002 /* ClaudeUsageBarTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		J10000000000000000000001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000000000000000000000E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		I10000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* ClaudeUsageBarApp.swift in Sources */,
+				A10000000000000000000002 /* AppDelegate.swift in Sources */,
+				A10000000000000000000003 /* KeychainTokenReader.swift in Sources */,
+				A10000000000000000000018 /* TokenProvider.swift in Sources */,
+				A10000000000000000000004 /* UsageClient.swift in Sources */,
+				A10000000000000000000005 /* UsageModels.swift in Sources */,
+				A1000000000000000000001B /* AllowlistedRedirectDelegate.swift in Sources */,
+				A10000000000000000000006 /* UsageMonitor.swift in Sources */,
+				A10000000000000000000007 /* NotificationService.swift in Sources */,
+				A10000000000000000000008 /* HotKeyManager.swift in Sources */,
+				A1000000000000000000001C /* MenuBarPresentation.swift in Sources */,
+				A10000000000000000000009 /* PreferencesStore.swift in Sources */,
+				A1000000000000000000000A /* SparkIconRenderer.swift in Sources */,
+				A1000000000000000000000B /* UsagePopoverView.swift in Sources */,
+				A1000000000000000000000C /* SettingsView.swift in Sources */,
+				A1000000000000000000000D /* SetupHelpView.swift in Sources */,
+				A1000000000000000000001A /* PopoverTheme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		I10000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1000000000000000000000F /* UsageModelsTests.swift in Sources */,
+				A10000000000000000000010 /* ThresholdLogicTests.swift in Sources */,
+				A10000000000000000000019 /* ConnectionLogicTests.swift in Sources */,
+				A1000000000000000000001D /* UsageClientTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		K10000000000000000000001 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E10000000000000000000001 /* ClaudeUsageBar */;
+			targetProxy = C10000000000000000000001 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		L10000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		L10000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = NO;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		L10000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ClaudeUsageBar/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claudeusagebar.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		L10000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_TESTABILITY = NO;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = ClaudeUsageBar/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claudeusagebar.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		L10000000000000000000005 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claudeusagebar.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClaudeUsageBar.app/Contents/MacOS/ClaudeUsageBar";
+			};
+			name = Debug;
+		};
+		L10000000000000000000006 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.claudeusagebar.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ClaudeUsageBar.app/Contents/MacOS/ClaudeUsageBar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		H10000000000000000000001 /* Build configuration list for PBXNativeTarget "ClaudeUsageBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				L10000000000000000000003 /* Debug */,
+				L10000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		H10000000000000000000002 /* Build configuration list for PBXNativeTarget "ClaudeUsageBarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				L10000000000000000000005 /* Debug */,
+				L10000000000000000000006 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		H10000000000000000000003 /* Build configuration list for PBXProject "ClaudeUsageBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				L10000000000000000000001 /* Debug */,
+				L10000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D10000000000000000000001 /* Project object */;
+}

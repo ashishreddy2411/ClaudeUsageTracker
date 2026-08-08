@@ -1,0 +1,65 @@
+name: Feature request
+description: Suggest a focused improvement to ClaudeUsageBar
+title: "feature: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe the user problem before proposing an implementation. Requests
+        must preserve explicit, read-only Keychain consent and the no-telemetry
+        model. ClaudeUsageBar never discovers or executes `claude`; setup and
+        sign-in stay external to the app.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What user need or limitation should this address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the experience and expected outcome.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Note any workarounds or smaller approaches you considered.
+  - type: dropdown
+    id: privacy
+    attributes:
+      label: Privacy or credential impact
+      description: >-
+        Does this affect Keychain access, credentials, networking, logging, or
+        persistence?
+      options:
+        - No expected impact
+        - Yes, explained below
+        - Unsure
+    validations:
+      required: true
+  - type: textarea
+    id: privacy_details
+    attributes:
+      label: Privacy details
+      description: Explain any impact or uncertainty identified above.
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmation
+      options:
+        - label: I searched existing issues for similar requests.
+          required: true
+        - label: >-
+            This request does not rely on storing or exposing credentials.
+          required: true
+        - label: >-
+            This request does not add executable discovery, subprocess/shell
+            authentication, or an app-owned OAuth flow.
+          required: true
+        - label: >-
+            This request does not imply Anthropic affiliation or endorsement.
+          required: true

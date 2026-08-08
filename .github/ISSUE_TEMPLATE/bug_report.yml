@@ -1,0 +1,74 @@
+name: Bug report
+description: Report a reproducible problem in ClaudeUsageBar
+title: "bug: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a problem. For security issues, use the private
+        process in SECURITY.md instead. Never include credentials,
+        authorization headers, Keychain exports, or private account data.
+        ClaudeUsageBar never runs Claude Code; complete any required official
+        setup externally, return to the app, and click Retry.
+  - type: input
+    id: version
+    attributes:
+      label: ClaudeUsageBar version
+      description: Provide a release version or commit SHA.
+      placeholder: "1.0.0 or abc1234"
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: "macOS 15.6"
+    validations:
+      required: true
+  - type: dropdown
+    id: installation
+    attributes:
+      label: Installation type
+      options:
+        - Local Xcode build
+        - Local ad-hoc DMG
+        - Public signed and notarized release (when available)
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem
+      description: Describe what happened and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Open ...
+        2. Click ...
+        3. Observe ...
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized diagnostics
+      description: |
+        Include only relevant, sanitized output. Remove account identifiers,
+        credentials, headers, cookies, and private usage data.
+      render: shell
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmation
+      options:
+        - label: I searched existing issues for duplicates.
+          required: true
+        - label: I removed all credentials and private account data.
+          required: true
+        - label: This is not a security vulnerability.
+          required: true
