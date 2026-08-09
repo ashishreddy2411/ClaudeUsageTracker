@@ -34,7 +34,17 @@ import AppKit
 @MainActor
 enum MenuBarPresentation {
     private static var savedPresentationOptions: NSApplication.PresentationOptions?
-    private static var isHoldingMenuBarVisible = false
+    private(set) static var isHoldingMenuBarVisible = false
+    private static var reassertTimer: Timer?
+
+    /// How often to re-assert while the panel is open.
+    ///
+    /// The previous implementation re-asserted three times (0s, 0.05s, 0.2s) and then
+    /// stopped. A fullscreen host re-applies its own auto-hide presentation whenever
+    /// the pointer leaves the menu bar, which is usually well after 0.2s, so the bar
+    /// slid away with the panel still open. Re-asserting for as long as the panel is
+    /// held is what actually covers pointer movement.
+    static let reassertInterval: TimeInterval = 0.25
     private static var didInstallObservers = false
     private static var observerTokens: [NSObjectProtocol] = []
 
@@ -116,6 +126,38 @@ enum MenuBarPresentation {
         assertMenuBarVisible()
         configureMenuBarWindows()
         reassertAfterActivationSettles()
+        startReassertTimer()
+    }
+
+    /// Presentation options only take effect for the *active* application, so an
+    /// inactive accessory cannot keep another app's fullscreen menu bar revealed.
+    /// Re-activating while the panel is open is what makes our options authoritative.
+    private static func startReassertTimer() {
+        reassertTimer?.invalidate()
+        let timer = Timer.scheduledTimer(
+            withTimeInterval: reassertInterval,
+            repeats: true
+        ) { _ in
+            Task { @MainActor in
+                guard isHoldingMenuBarVisible else {
+                    stopReassertTimer()
+                    return
+                }
+                if !NSApp.isActive {
+                    NSApp.activate(ignoringOtherApps: true)
+                }
+                assertMenuBarVisible()
+                configureMenuBarWindows()
+            }
+        }
+        // .common so the re-assert keeps firing during menu tracking and scrolling.
+        RunLoop.main.add(timer, forMode: .common)
+        reassertTimer = timer
+    }
+
+    private static func stopReassertTimer() {
+        reassertTimer?.invalidate()
+        reassertTimer = nil
     }
 
     /// Call when the MenuBarExtra UI is dismissed.
@@ -123,6 +165,7 @@ enum MenuBarPresentation {
     static func endMenuBarUI() {
         guard isHoldingMenuBarVisible else { return }
         isHoldingMenuBarVisible = false
+        stopReassertTimer()
         if let saved = savedPresentationOptions {
             // Never re-apply hide-menu-bar flags from a previous session.
             let hidesMenuBar = saved.contains(.hideMenuBar) || saved.contains(.autoHideMenuBar)
