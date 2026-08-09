@@ -3,6 +3,11 @@
 Thank you for helping improve ClaudeUsageBar. Keep changes focused, explain the
 user impact, and preserve the project's read-only privacy model.
 
+This is an independent, non-commercial hobby project with no affiliation to
+Anthropic PBC. Bug fixes and improvements are welcome by pull request. By
+contributing you agree that your work is released under the MIT licence, and
+that it introduces no third-party logo, brand asset, or copied source code.
+
 ## Development setup
 
 You need macOS 13 or later and Xcode 15 or later.

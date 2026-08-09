@@ -3,8 +3,18 @@
 A native macOS menu bar app that shows the session and weekly usage bars
 available to supported Claude subscriptions.
 
-ClaudeUsageBar is an independent open-source project. It is not affiliated with,
-endorsed by, or sponsored by Anthropic.
+> **Independent, non-commercial, unofficial.**
+> ClaudeUsageBar is a personal hobby project maintained by volunteers in their
+> own time. It is **not affiliated with, endorsed by, sponsored by, or connected
+> to Anthropic PBC** in any way. It is given away free of charge, contains no
+> advertising, no analytics, no telemetry, and no paid tier, and it neither
+> collects nor monetises any user data. Nothing here is an official Anthropic
+> product or an official Claude Code component.
+>
+> "Claude", "Claude Code", and "Anthropic" are trademarks of Anthropic PBC. This
+> project is not the trademark owner. Those names appear only descriptively, to
+> state which software this tool interoperates with, as permitted for accurate
+> descriptive reference. See [Licence and trademarks](#licence-and-trademarks).
 
 <img src="docs/images/app-icon.png" alt="ClaudeUsageBar icon" width="128">
 
@@ -292,9 +302,56 @@ disables future Keychain reads, and clears app state and cached usage. It does
 not log out Claude Code. Late Keychain or network responses cannot restore
 connected state or overwrite newer state.
 
-## License
+## Contributing
 
-MIT — see [LICENSE](LICENSE).
+Contributions are welcome. This is a small hobby project, so the bar is
+practical rather than bureaucratic: if something is broken or missing, open an
+issue or send a pull request.
 
-Claude and Claude Code are trademarks of Anthropic. Their names are used only
-to describe interoperability with the official Claude Code installation.
+1. Fork the repository and branch from `main`
+   (`fix/refresh-error-state`, `feat/menu-bar-window-picker`).
+2. Run the tests before pushing:
+   ```bash
+   xcodebuild test -project ClaudeUsageBar.xcodeproj -scheme ClaudeUsageBar \
+     -destination 'platform=macOS' CODE_SIGN_IDENTITY="-"
+   swift Scripts/smoke-logic.swift
+   ```
+3. Open a pull request. The template asks three short questions.
+
+Two rules exist because they protect users rather than the project:
+
+- Keep the credential path read-only and opt-in. Do not add code that writes,
+  refreshes, or deletes the Claude Code Keychain item, that discovers or
+  executes `claude`, or that implements an app-owned OAuth flow.
+- Never commit credentials, tokens, or unsanitised screenshots.
+
+[CONTRIBUTING.md](CONTRIBUTING.md) has the longer version. By contributing you
+agree your work is released under the MIT licence below.
+
+## Licence and trademarks
+
+Source code and generated artwork: MIT — see [LICENSE](LICENSE). The MIT licence
+covers this project's own code and assets only.
+
+All icon and status-ring artwork in this repository is generated from geometric
+primitives by `Scripts/generate-app-icon.swift` and
+`ClaudeUsageBar/UI/SparkIconRenderer.swift`. It contains no third-party artwork,
+no vendor logo, and no SF Symbol, and deliberately does not resemble any
+Anthropic mark.
+
+### Trademark notice
+
+"Anthropic", "Claude", and "Claude Code" are trademarks of Anthropic PBC.
+"Apple", "macOS", "Xcode", and "SF Symbols" are trademarks of Apple Inc. This
+project is not affiliated with, endorsed by, or sponsored by either company, and
+claims no rights in their marks.
+
+Those names are used here only in a descriptive sense, to identify the software
+this tool works alongside. This project does not use any Anthropic logo, icon,
+wordmark, brand colour, or other brand asset, and does not copy or redistribute
+any Anthropic or Apple source code.
+
+If Anthropic PBC or Apple Inc. believes any part of this project misuses their
+marks or content, please open an issue or contact the maintainer through the
+address in [SECURITY.md](SECURITY.md). The maintainer's intent is to comply
+promptly and in good faith, including renaming or removing material on request.
